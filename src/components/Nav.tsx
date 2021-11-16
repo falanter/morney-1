@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
 import styled from 'styled-components'
 import Icon from './Icon';
 
@@ -32,25 +32,44 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
-                    <Link to="/home">
+                    <CustomLink to="/home">
                         <Icon name={'tag'} />
                         home
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li>
-                    <Link to="/about">
+                    <CustomLink to="/about">
                         <Icon name={'statistics'} />
                         about
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li>
-                    <Link to="/user">
+                    <CustomLink to="/user">
                         <Icon name={'tag'} />
                         user
-                    </Link>
+                    </CustomLink>
                 </li>
             </ul>
         </NavWrapper>
     )
 }
+function CustomLink({ children, to, ...props }: LinkProps) {
+    let resolved = useResolvedPath(to);
+    let match = useMatch({ path: resolved.pathname, end: true });
+    return (
+      <div>
+        <Link
+          style={{ 
+            textDecoration: match ? "underline" : "none" ,
+            color:match ? "green" : ""
+          }}
+          to={to}
+          {...props}
+        >
+          {children}
+        </Link>
+        {/* {match && " (active)"} */}
+      </div>
+    );
+  }
 export default Nav;
