@@ -10,17 +10,20 @@ const NavWrapper=styled.nav`
   ul{
     display: flex;
     li{
-      width: 33.333%;
-      text-align: center;
-      padding: 4px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .icon{
-          width:32px;
-          height:32px;
-      }
+        width: 33.333%;
+        text-align: center;
+        box-shadow: 0 0 1px rgba(0,0,0,0.25);
+        a{
+            padding: 4px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                width:32px;
+                height:32px;
+            }
+        }
     }
   }
 `;
@@ -29,16 +32,22 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
-                    <Icon name={'tag'} />
-                    <Link to="/home">home</Link>
+                    <Link to="/home">
+                        <Icon name={'tag'} />
+                        home
+                    </Link>
                 </li>
                 <li>
-                    <Icon name={'statistics'} />
-                    <Link to="/about">about</Link>
+                    <Link to="/about">
+                        <Icon name={'statistics'} />
+                        about
+                    </Link>
                 </li>
                 <li>
-                    <Icon name={'tag'} />
-                    <Link to="/user">user</Link>
+                    <Link to="/user">
+                        <Icon name={'tag'} />
+                        user
+                    </Link>
                 </li>
             </ul>
         </NavWrapper>
