@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
+require('icons/tag.svg');
 
 const NavWrapper=styled.nav`
   /* border: 1px solid blue; */
@@ -10,7 +11,15 @@ const NavWrapper=styled.nav`
     li{
       width: 33.333%;
       text-align: center;
-      padding: 16px;
+      padding: 4px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .icon{
+          width:32px;
+          height:32px;
+      }
     }
   }
 `;
@@ -19,6 +28,9 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
+                    <svg fill="red" className="icon">
+                        <use xlinkHref="#tag"/>
+                    </svg>
                     <Link to="/home">home</Link>
                 </li>
                 <li>
