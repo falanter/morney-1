@@ -1,11 +1,10 @@
 import Layout from "components/Layout";
 
-function Home(){
+function Statistics(){
     return(
       <Layout>
-        <h2>home</h2>
+        <h2>statistics</h2>
       </Layout>
     );
 }
-
-export default Home;
+export default Statistics;

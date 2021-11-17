@@ -1,19 +1,26 @@
 import React from 'react';
 import {Routes,Route,Navigate} from 'react-router-dom';
-import About from 'view/About';
-import Home from 'view/Home';
+import Tags from 'view/Tags';
+import Money from 'view/Money';
 import NoMatch from 'view/NoMatch';
-import User from 'view/User';
+import Statistics from 'view/Statistics';
+import styled from 'styled-components';
+
+const AppWrapper=styled.div`
+  color:#333;
+`;
 
 function App() {
   return (
-    <Routes>
-      <Route path="/"element={<Navigate to="/home" />} />
-      <Route path="/home" element={<Home/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/user"  element={<User/>} />
-      <Route path="*" element={<NoMatch/>} />
-    </Routes>
+    <AppWrapper>
+      <Routes>
+        <Route path="/"element={<Navigate to="/money" />} />
+        <Route path="/money" element={<Money/>} />
+        <Route path="/tags" element={<Tags/>} />
+        <Route path="/statistics"  element={<Statistics/>} />
+        <Route path="*" element={<NoMatch/>} />
+      </Routes>
+    </AppWrapper>
   );
 }
 

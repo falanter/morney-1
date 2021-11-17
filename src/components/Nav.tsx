@@ -2,7 +2,6 @@ import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
 import styled from 'styled-components'
 import Icon from './Icon';
 
-
 const NavWrapper=styled.nav`
   /* border: 1px solid blue; */
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
@@ -32,21 +31,21 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
-                    <CustomLink to="/home">
+                    <CustomLink to="/money">
                         <Icon name={'tag'} />
-                        home
+                        money
                     </CustomLink>
                 </li>
                 <li>
-                    <CustomLink to="/about">
+                    <CustomLink to="/tags">
                         <Icon name={'statistics'} />
-                        about
+                        tags
                     </CustomLink>
                 </li>
                 <li>
-                    <CustomLink to="/user">
+                    <CustomLink to="/statistics">
                         <Icon name={'tag'} />
-                        user
+                        statistics
                     </CustomLink>
                 </li>
             </ul>

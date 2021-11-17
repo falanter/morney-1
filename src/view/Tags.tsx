@@ -1,10 +1,10 @@
 import Layout from "components/Layout";
 
-function About(){
+function Tags(){
     return(
       <Layout>
-        <h2>about</h2>
+        <h2>tags</h2>
       </Layout>
     );
 }
-export default About;
+export default Tags;
