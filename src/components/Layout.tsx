@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Nav from "./Nav"
 
 const Wrapper=styled.div`
-  /* border: 1px solid #ccc; */
+  /* border: 1px solid red; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,12 +10,13 @@ const Wrapper=styled.div`
 const Main=styled.div`
   /* border: 1px solid green; */
   flex-grow: 1;
+  /* color: red; */
   overflow: auto;
 `;
 const Layout=(props:any)=>{
     return(
         <Wrapper>
-            <Main>
+            <Main className={props.className}>
                 {props.children}
             </Main>
             <Nav />  
