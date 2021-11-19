@@ -1,4 +1,5 @@
 import Layout from "components/Layout";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useTags } from "useTags";
 
@@ -9,17 +10,19 @@ const TagList = styled.ol`
     border-bottom: 1px solid #d5d5d5;
     line-height: 20px;
     padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .arrow-right::before{
-        content:'';
-        display: block;
-        width: 6px;
-        height: 6px;
-        border-left: 1px solid #000;
-        border-top:1px solid #000;
-        transform: rotate(135deg);
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .arrow-right::before{
+          content:'';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-left: 1px solid #000;
+          border-top:1px solid #000;
+          transform: rotate(135deg);
+      }
     }
   }
 `
@@ -48,11 +51,14 @@ function Tags(){
         <TagList>
           {tags.map(tag=>
             <li key={tag}>
-              <span className="oneLine">{tag}</span>
-              <div className="arrow-right"></div>
+              <Link to={tag}>
+                <span className="oneLine">{tag}</span>
+                <div className="arrow-right"></div>
+              </Link>
             </li>
           )}
         </TagList>
+        <Link to="me">me</Link>
         <Center>
           <Space />
           <Space />
