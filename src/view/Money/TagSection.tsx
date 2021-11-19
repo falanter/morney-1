@@ -33,9 +33,14 @@ const Wrapper=styled.section`
     cursor: pointer;
   }
 `
-const TagSection:React.FC=(props)=>{
+type Props={
+  value:string[];
+  onChange:(selected:string[])=>void;
+}  //ts传递参数时必须要先声明类型
+const TagSection:React.FC<Props>=(props)=>{
   const [tags,setTags]=useState<string[]>(['衣','食','住','行']);
-  const [selectedTags,setSelectedTags]=useState<string[]>([]);
+  // const [selectedTags,setSelectedTags]=useState<string[]>([]);
+  const selectedTags=props.value;
   const onAddTag=()=>{
     const tagName=window.prompt('新的标签名称');
     if(tagName!==null){
@@ -46,9 +51,9 @@ const TagSection:React.FC=(props)=>{
     const index=selectedTags.indexOf(tag);
     if(index>=0){
       //如果tag已被选中，就复制所有没有被选中的tag，作为新的selectedTag
-      setSelectedTags(selectedTags.filter(t=>t!==tag));
+      props.onChange(selectedTags.filter(t=>t!==tag));
     }else{
-      setSelectedTags([...selectedTags,tag])
+      props.onChange([...selectedTags,tag])
     }
   }
   const getClass=(tag:string)=>selectedTags.indexOf(tag)>= 0 ? 'selected' : '';

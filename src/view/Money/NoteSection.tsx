@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper=styled.section`
@@ -21,16 +20,21 @@ const Wrapper=styled.section`
     }
   }
 `
-const NoteSection:React.FC=(props)=>{
-  const [note,setNote]=useState('');
-  console.log(note);
+type Props={
+  value:string;
+  onChange:(value:string)=>void;
+} 
+const NoteSection:React.FC<Props>=(props)=>{
+  // const [note,setNote]=useState('');
+  const note=props.value
+  // console.log(note);
   return(
     <Wrapper>
       <label>
         <span>备注</span>
         <input type="text" placeholder="在这里添加备注"
           value={note}
-          onChange={(e)=>setNote(e.target.value)}   //受控组件
+          onChange={(e)=>props.onChange(e.target.value)}   //受控组件
         />
       </label>
     </Wrapper>)

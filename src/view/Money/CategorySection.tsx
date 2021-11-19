@@ -24,12 +24,18 @@ const Wrapper=styled.section`
     }
   }
 `
-const CategorySection:React.FC=(props)=>{
+type Category ='-' | '+';
+type Props={
+  value:string;
+  onChange:(value:Category)=>void;
+} 
+const CategorySection:React.FC<Props>=(props)=>{
   const categoryMap={'-':'支出','+':'收入'};
   type Keys = keyof typeof categoryMap;        //封装
-  const [categoryList] = useState<Keys[]>(['-','+']);
   // const [categoryList] = useState<('-' | '+')[]>(['-','+']);  //参数类型只能选择'+'和'-'
-  const [category,setCategory]=useState('-');  //+表示收入 -表示支出
+  const [categoryList] = useState<Keys[]>(['-','+']);
+  // const [category,setCategory]=useState('-');  //+表示收入 -表示支出
+  const category=props.value
   return(
     <Wrapper>
       <ul>
@@ -37,7 +43,7 @@ const CategorySection:React.FC=(props)=>{
           <li 
             key={c}
             className={category===c ? 'selected' : ''}
-            onClick={()=>{setCategory(c);}}
+            onClick={()=>{props.onChange(c);}}
           >{categoryMap[c]}
           </li>
         )}
