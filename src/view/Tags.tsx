@@ -52,13 +52,12 @@ function Tags(){
           {tags.map(tag=>
             <li key={tag.id}>
               <Link to={""+tag.id}>
-                <span className="oneLine">{tag.id}</span>
+                <span className="oneLine">{tag.id}：{tag.name}</span>
                 <div className="arrow-right"></div>
               </Link>
             </li>
           )}
         </TagList>
-        <Link to="me">me</Link>
         <Center>
           <Space />
           <Space />

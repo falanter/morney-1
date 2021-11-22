@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from 'react';
 import { useTags } from "useTags";
+import { createId } from "lib/createId";
 
 const Wrapper=styled.section`
   background-color:#fff;
@@ -45,7 +46,7 @@ const TagSection:React.FC<Props>=(props)=>{
   const onAddTag=()=>{
     const tagName=window.prompt('新的标签名称');
     if(tagName!==null){
-      setTags([...tags,{id:Math.random(),name:tagName}])    //获得当前数据tags，放入数据tagName
+      setTags([...tags,{id:createId(),name:tagName}])    //获得当前数据tags，放入数据tagName
     }
   };
   const onToggleTag=(tagId:number)=>{

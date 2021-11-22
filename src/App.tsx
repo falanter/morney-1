@@ -5,7 +5,9 @@ import Money from 'view/Money';
 import NoMatch from 'view/NoMatch';
 import Statistics from 'view/Statistics';
 import styled from 'styled-components';
-import Tag from 'view/Tag';
+// import Test from 'view/Test';
+import Tag from 'view/Tag'
+
 // import { useTags } from 'useTags';
 
 const AppWrapper=styled.div`
@@ -18,8 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/money" />} />
         <Route path="/money"  element={<Money/>} />
-        <Route path="/tags" element={<Tags/>}/>
-        <Route  path="/tags/:tag" element={<Tag/>}/>
+        <Route path="/tags" element={<Tags/>} >
+        </Route>
+        {/* <Route path="/tags/:me" element={<Test/>} /> */}
+        <Route path="/tags/:id" element={<Tag/>} />
         <Route path="/statistics"  element={<Statistics/>} />
         <Route path="*" element={<NoMatch/>} />
       </Routes>
