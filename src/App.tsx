@@ -6,7 +6,7 @@ import NoMatch from 'view/NoMatch';
 import Statistics from 'view/Statistics';
 import styled from 'styled-components';
 import Tag from 'view/Tag';
-import { useTags } from 'useTags';
+// import { useTags } from 'useTags';
 
 const AppWrapper=styled.div`
   color:#333;

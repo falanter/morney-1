@@ -45,14 +45,14 @@ const Space=styled.div`
 `
 
 function Tags(){
-  const {tags,setTags}=useTags();
+  const {tags}=useTags();
     return(
       <Layout>
         <TagList>
           {tags.map(tag=>
-            <li key={tag}>
-              <Link to={tag}>
-                <span className="oneLine">{tag}</span>
+            <li key={tag.id}>
+              <Link to={""+tag.id}>
+                <span className="oneLine">{tag.id}</span>
                 <div className="arrow-right"></div>
               </Link>
             </li>
