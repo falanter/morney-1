@@ -1,5 +1,7 @@
+import { ArrowRight } from "components/Arrow";
+import { Button } from "components/Button";
 import Layout from "components/Layout";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { useTags } from "useTags";
 
@@ -14,26 +16,10 @@ const TagList = styled.ol`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .arrow-right::before{
-          content:'';
-          display: block;
-          width: 6px;
-          height: 6px;
-          border-left: 1px solid #000;
-          border-top:1px solid #000;
-          transform: rotate(135deg);
-      }
     }
   }
 `
-const Button=styled.button`
-  font-size: 18px;
-  border: none;
-  padding: 8px 12px;
-  background-color: #999;
-  border-radius: 4px;
-  color: #fff;
-`
+
 const Center=styled.div`
   display: flex;
   flex-direction: column;
@@ -53,7 +39,7 @@ function Tags(){
             <li key={tag.id}>
               <Link to={""+tag.id}>
                 <span className="oneLine">{tag.id}：{tag.name}</span>
-                <div className="arrow-right"></div>
+                <ArrowRight />
               </Link>
             </li>
           )}
@@ -64,6 +50,7 @@ function Tags(){
           <Button>新增标签</Button>
           <Space />
         </Center>
+        <Outlet />
       </Layout>
     );
 }
