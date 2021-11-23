@@ -1,6 +1,8 @@
 import { ArrowRight } from "components/Arrow";
 import { Button } from "components/Button";
+import { Center } from "components/Center";
 import Layout from "components/Layout";
+import { Space } from "components/Space";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { useTags } from "useTags";
@@ -18,16 +20,6 @@ const TagList = styled.ol`
       justify-content: space-between;
     }
   }
-`
-
-const Center=styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-const Space=styled.div`
-  height: 16px;
 `
 
 function Tags(){
