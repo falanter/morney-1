@@ -24,7 +24,7 @@ const Input:React.FC<Props>=(props)=>{
     return(
         <Label>
             <span>{label}</span>
-            <input {...rest}/>
+            <input {...rest} />
         </Label>
     );
 };

@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Navigate to="/money" />} />
         <Route path="/money"  element={<Money/>} />
         <Route path="/tags" element={<Tags/>} >
-          {/* <Route path=":me" element={<Test/>} /> */}
+          {/* <Route path="me" element={<Test/>} /> */}
         </Route>
         <Route path="/tags/:id" element={<Tag/>} />
         <Route path="/statistics"  element={<Statistics/>} />
