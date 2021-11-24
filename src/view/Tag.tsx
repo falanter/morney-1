@@ -1,5 +1,5 @@
 import Layout from "components/Layout";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useTags } from "useTags";
 import { ArrowLeft } from "components/Arrow";
 import { Button } from "components/Button";
@@ -23,38 +23,39 @@ const InputWrapper=styled.div`
     margin-top: 16px;
 `
 
-const Tag:React.FC=(props)=>{
-    
-    const {findTag,updateTag}=useTags();
-    let {id}=useParams();   //let {id:idString}=useParams();
-    let idString='';
-    if(typeof(id)==='string'){
-        idString=id
-        const tag=findTag(parseInt(idString));
-        return(
-            <Layout>
-                <Topbar>
-                    <ArrowLeft />
-                    <span>编辑标签</span>
-                    <Icon />
-                </Topbar>
-                <InputWrapper>
-                    <Input label="标签名" type="text" placeholder="标签名" defaultValue={tag.name} 
-                    onChange={(e)=>{
-                        updateTag(tag.id,{name:e.target.value});
-                    }} />
-                </InputWrapper>
-                <Center>
-                    <Space />
-                    <Space />
-                    <Button>删除标签</Button>
-                </Center>
-            </Layout>
-        );
-    }else{
-        return(
-            <Layout>hi</Layout>
-        );
+const Tag:React.FC=()=>{
+    let navigate=useNavigate();
+    const {findTag,updateTag,deleteTag}=useTags();
+    let {id:idString}=useParams() || '';   //let {id:idString}=useParams();
+    const tag=findTag(parseInt(idString || ''));
+    const TagContent=(tag:{id:number;name:string})=>(
+        <div>
+            <InputWrapper>
+                <Input label="标签名" type="text" placeholder="标签名" defaultValue={tag.name} 
+                onChange={(e)=>{
+                    updateTag(tag.id,{name:e.target.value});
+                }} />
+            </InputWrapper>
+            <Center>
+                <Space />
+                <Space />
+                <Button onClick={()=>deleteTag(tag.id)}>删除标签</Button>
+            </Center>
+        </div>
+    )
+    const onClickBack=()=>{
+        navigate("/tags",{replace:true})
     }
+    // if(tag)
+    return(
+        <Layout>
+            <Topbar>
+                <ArrowLeft onClick={onClickBack} />
+                <span>编辑标签</span>
+                <Icon />
+            </Topbar>
+            {tag ? TagContent(tag): <Center>tag 不存在</Center>}
+        </Layout>
+    );
 };
 export default Tag;

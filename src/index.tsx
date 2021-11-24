@@ -6,6 +6,7 @@ import 'index.scss'
 import {
   HashRouter as Router
 }from 'react-router-dom'
+console.log('页面刷新')
 ReactDOM.render(
   <React.StrictMode>
     <Router>
