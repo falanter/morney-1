@@ -54,13 +54,13 @@ function Statistics(){
         <CategorySection value={category}
           onChange={value=>setCategory(value)}/>
       </CategoryWrapper>
-      {array.map(([date,records])=><div>
+      {array.map(([date,records], index)=><div key={index}>
         <Header>
           {date}
         </Header>
         <div>
-          {records.map(r=>{
-            return <Item>
+          {records.map((r, index)=>{
+            return <Item key={index}>
             <div className="tags oneLine">
               {r.tagIds
               .map(tagId=><span key={tagId}>{getName(tagId)}</span>)
