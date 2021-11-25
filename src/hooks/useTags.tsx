@@ -61,6 +61,10 @@ const useTags=()=>{     //规定为用use..//封装一个自定义Hook
           setTags([...tags,{id:createId(),name:tagName}])    //获得当前数据tags，放入数据tagName
         }
     };
-    return{tags,addTag,setTags,findTag,updateTag,findTagIndex,deleteTag}
+    const getName=(id:number)=>{
+        const tag=tags.filter(t=>t.id===id)[0]
+        return tag? tag.name : ''
+    }
+    return{tags,addTag,getName,setTags,findTag,updateTag,findTagIndex,deleteTag}
 }
 export {useTags}
