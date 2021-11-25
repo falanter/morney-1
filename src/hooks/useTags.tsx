@@ -20,7 +20,7 @@ const useTags=()=>{     //规定为用use..//封装一个自定义Hook
     },[]);
     useUpdate(()=>{
         window.localStorage.setItem('tags',JSON.stringify(tags))
-    },[tags])   //不可变数据
+    },tags)   //不可变数据
    
     const findTag=(id:number)=>tags.filter(tag=>tag.id===id)[0];
     const findTagIndex=(id:number)=>{
