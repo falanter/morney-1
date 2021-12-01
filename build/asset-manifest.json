@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/falanter/morney-1/static/css/main.015e2788.chunk.css",
-    "main.js": "/falanter/morney-1/static/js/main.2c6c9d0f.chunk.js",
-    "main.js.map": "/falanter/morney-1/static/js/main.2c6c9d0f.chunk.js.map",
-    "runtime-main.js": "/falanter/morney-1/static/js/runtime-main.8d870748.js",
-    "runtime-main.js.map": "/falanter/morney-1/static/js/runtime-main.8d870748.js.map",
-    "static/js/2.98f867d7.chunk.js": "/falanter/morney-1/static/js/2.98f867d7.chunk.js",
-    "static/js/2.98f867d7.chunk.js.map": "/falanter/morney-1/static/js/2.98f867d7.chunk.js.map",
-    "static/js/3.5e3396f9.chunk.js": "/falanter/morney-1/static/js/3.5e3396f9.chunk.js",
-    "static/js/3.5e3396f9.chunk.js.map": "/falanter/morney-1/static/js/3.5e3396f9.chunk.js.map",
-    "index.html": "/falanter/morney-1/index.html",
-    "static/css/main.015e2788.chunk.css.map": "/falanter/morney-1/static/css/main.015e2788.chunk.css.map",
-    "static/js/2.98f867d7.chunk.js.LICENSE.txt": "/falanter/morney-1/static/js/2.98f867d7.chunk.js.LICENSE.txt"
+    "main.css": "/falanter/morney-1/build/static/css/main.015e2788.chunk.css",
+    "main.js": "/falanter/morney-1/build/static/js/main.2c6c9d0f.chunk.js",
+    "main.js.map": "/falanter/morney-1/build/static/js/main.2c6c9d0f.chunk.js.map",
+    "runtime-main.js": "/falanter/morney-1/build/static/js/runtime-main.8c0a0a07.js",
+    "runtime-main.js.map": "/falanter/morney-1/build/static/js/runtime-main.8c0a0a07.js.map",
+    "static/js/2.fee44692.chunk.js": "/falanter/morney-1/build/static/js/2.fee44692.chunk.js",
+    "static/js/2.fee44692.chunk.js.map": "/falanter/morney-1/build/static/js/2.fee44692.chunk.js.map",
+    "static/js/3.5e3396f9.chunk.js": "/falanter/morney-1/build/static/js/3.5e3396f9.chunk.js",
+    "static/js/3.5e3396f9.chunk.js.map": "/falanter/morney-1/build/static/js/3.5e3396f9.chunk.js.map",
+    "index.html": "/falanter/morney-1/build/index.html",
+    "static/css/main.015e2788.chunk.css.map": "/falanter/morney-1/build/static/css/main.015e2788.chunk.css.map",
+    "static/js/2.fee44692.chunk.js.LICENSE.txt": "/falanter/morney-1/build/static/js/2.fee44692.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d870748.js",
-    "static/js/2.98f867d7.chunk.js",
+    "static/js/runtime-main.8c0a0a07.js",
+    "static/js/2.fee44692.chunk.js",
     "static/css/main.015e2788.chunk.css",
     "static/js/main.2c6c9d0f.chunk.js"
   ]

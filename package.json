@@ -1,7 +1,7 @@
 {
   "name": "morney-1",
   "version": "0.1.0",
-  "homepage": "https://github.com/falanter/morney-1/",
+  "homepage": "https://github.com/falanter/morney-1/build/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
