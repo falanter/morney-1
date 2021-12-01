@@ -1,6 +1,7 @@
 {
   "name": "morney-1",
   "version": "0.1.0",
+  "homepage": "https://github.com/falanter/morney-1/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -41,7 +42,6 @@
     "file-loader": "6.1.1",
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "4.5.0",
-    "http-serve": "^1.0.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.6.0",
     "jest-circus": "26.6.0",
