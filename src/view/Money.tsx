@@ -10,7 +10,14 @@ import { TagSection } from "./Money/TagSection";
 const MyLayout=styled(Layout)`
   display: flex;
   flex-direction: column;
+  /* min-height: 1000px; */
+  border: 1px solid red;
 `
+// const Con=styled.div`
+//   border: 1px solid red;
+//   flex-shrink: 0; 
+//   overflow: auto;
+// `
 const CategoryWrapper=styled.div`
   background-color: #c4c4c4;
 `
@@ -41,9 +48,11 @@ function Money(){
     <MyLayout>
       {/* {JSON.stringify(selected)}
       <hr/> */}
-      <TagSection value={selected.tagIds} 
-        onChange={tagIds=>onChange({tagIds})}
-      />
+      {/* <Con> */}
+        <TagSection value={selected.tagIds} 
+          onChange={tagIds=>onChange({tagIds})}
+        />
+      {/* </Con> */}
       <NoteSection value={selected.note}
         onChange={note=>onChange({note})}
       />
