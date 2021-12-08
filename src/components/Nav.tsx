@@ -6,6 +6,7 @@ const NavWrapper=styled.nav`
   /* border: 1px solid blue; */
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
   line-height: 24px;
+  /* height: 65px; */
   ul{
     display: flex;
     li{

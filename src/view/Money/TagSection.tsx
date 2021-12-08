@@ -6,11 +6,12 @@ import { useTags } from "hooks/useTags";
 const Wrapper=styled.section`
   background-color:#fff;
   padding:12px 16px;
-  flex-grow: 1;
-  /* border: 1px solid red;
-  flex-shrink: 0; 
+  flex: 1;
+  /* border: 5px solid red; */
+  /*flex-shrink: 0; 
   overflow: auto; */
-  /* border: 1px solid red; */
+  border: 1px solid red;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   /* justify-content: flex-end;  //尽量靠下 */

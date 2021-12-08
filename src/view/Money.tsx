@@ -11,7 +11,7 @@ const MyLayout=styled(Layout)`
   display: flex;
   flex-direction: column;
   /* min-height: 1000px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `
 // const Con=styled.div`
 //   border: 1px solid red;
