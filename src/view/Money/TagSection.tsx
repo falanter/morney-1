@@ -10,7 +10,7 @@ const Wrapper=styled.section`
   /* border: 5px solid red; */
   /*flex-shrink: 0; 
   overflow: auto; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
