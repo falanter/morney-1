@@ -7,8 +7,16 @@ import { CategorySection } from "./Money/CategorySection";
 import day from 'dayjs'
 import 'core-js'
 
+const LayoutWrapper=styled(Layout)`
+  display: flex;
+  flex-direction: column;
+`
 const CategoryWrapper=styled.div`
   background-color: white;
+  /* border: 1px solid red; */
+`
+const StatisticsMain=styled.div`
+  overflow-y: scroll;
 `
 const Item=styled.div`
   display: flex;
@@ -49,37 +57,39 @@ function Statistics(){
     return 0
   })
   return(
-    <Layout>
+    <LayoutWrapper>
       <CategoryWrapper>
         <CategorySection value={category}
           onChange={value=>setCategory(value)}/>
       </CategoryWrapper>
-      {array.map(([date,records], index)=><div key={index}>
-        <Header>
-          {date}
-        </Header>
-        <div>
-          {records.map((r, index)=>{
-            return <Item key={index}>
-            <div className="tags oneLine">
-              {r.tagIds
-              .map(tagId=><span key={tagId}>{getName(tagId)}</span>)
-              .reduce((result,span,index,array)=>
-              result.concat(index<array.length-1 ? [span,'，']:[span]),[] as ReactNode[])}
-            </div>
-            {r.note && <div className="note">
-              {r.note}  
-            </div>}
-            <div className="amount">
-              ￥{r.amount}
-            </div>
-            {/* |{day(r.createdAt).format('YYYY年MM月DD日')} */}
-          </Item>
-          })}
+      <StatisticsMain>
+        {array.map(([date,records], index)=><div key={index}>
+          <Header>
+            {date}
+          </Header>
+          <div>
+            {records.map((r, index)=>{
+              return <Item key={index}>
+              <div className="tags oneLine">
+                {r.tagIds
+                .map(tagId=><span key={tagId}>{getName(tagId)}</span>)
+                .reduce((result,span,index,array)=>
+                result.concat(index<array.length-1 ? [span,'，']:[span]),[] as ReactNode[])}
+              </div>
+              {r.note && <div className="note">
+                {r.note}  
+              </div>}
+              <div className="amount">
+                ￥{r.amount}
+              </div>
+              {/* |{day(r.createdAt).format('YYYY年MM月DD日')} */}
+            </Item>
+            })}
+          </div>
         </div>
-      </div>
-      )}
-    </Layout>
+        )}
+      </StatisticsMain>
+    </LayoutWrapper>
   );
 }
 export default Statistics;

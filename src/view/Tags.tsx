@@ -7,9 +7,14 @@ import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { useTags } from "hooks/useTags";
 
+const LayoutWrapper=styled(Layout)`
+  display: flex;
+  flex-direction: column;
+`
 const TagList = styled.ol`
   font-size: 16px;
   background-color: white;
+  overflow-y: scroll;
   li{
     border-bottom: 1px solid #d5d5d5;
     line-height: 20px;
@@ -25,7 +30,7 @@ const TagList = styled.ol`
 function Tags(){
   const {tags,addTag}=useTags();
     return(
-      <Layout>
+      <LayoutWrapper>
         <TagList>
           {tags.map(tag=>
             <li key={tag.id}>
@@ -43,7 +48,7 @@ function Tags(){
           <Space />
         </Center>
         <Outlet />
-      </Layout>
+      </LayoutWrapper>
     );
 }
 export default Tags;

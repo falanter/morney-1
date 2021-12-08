@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/morney-1/build/static/css/main.5a080aa7.chunk.css",
-    "main.js": "/morney-1/build/static/js/main.0b205821.chunk.js",
-    "main.js.map": "/morney-1/build/static/js/main.0b205821.chunk.js.map",
+    "main.js": "/morney-1/build/static/js/main.7343866c.chunk.js",
+    "main.js.map": "/morney-1/build/static/js/main.7343866c.chunk.js.map",
     "runtime-main.js": "/morney-1/build/static/js/runtime-main.6e74cb6b.js",
     "runtime-main.js.map": "/morney-1/build/static/js/runtime-main.6e74cb6b.js.map",
-    "static/js/2.a57b4ef6.chunk.js": "/morney-1/build/static/js/2.a57b4ef6.chunk.js",
-    "static/js/2.a57b4ef6.chunk.js.map": "/morney-1/build/static/js/2.a57b4ef6.chunk.js.map",
+    "static/js/2.83382bf2.chunk.js": "/morney-1/build/static/js/2.83382bf2.chunk.js",
+    "static/js/2.83382bf2.chunk.js.map": "/morney-1/build/static/js/2.83382bf2.chunk.js.map",
     "static/js/3.5e3396f9.chunk.js": "/morney-1/build/static/js/3.5e3396f9.chunk.js",
     "static/js/3.5e3396f9.chunk.js.map": "/morney-1/build/static/js/3.5e3396f9.chunk.js.map",
     "index.html": "/morney-1/build/index.html",
     "static/css/main.5a080aa7.chunk.css.map": "/morney-1/build/static/css/main.5a080aa7.chunk.css.map",
-    "static/js/2.a57b4ef6.chunk.js.LICENSE.txt": "/morney-1/build/static/js/2.a57b4ef6.chunk.js.LICENSE.txt"
+    "static/js/2.83382bf2.chunk.js.LICENSE.txt": "/morney-1/build/static/js/2.83382bf2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6e74cb6b.js",
-    "static/js/2.a57b4ef6.chunk.js",
+    "static/js/2.83382bf2.chunk.js",
     "static/css/main.5a080aa7.chunk.css",
-    "static/js/main.0b205821.chunk.js"
+    "static/js/main.7343866c.chunk.js"
   ]
 }
